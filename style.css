@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#bookForm{
+    display: flex;
+    position: fixed;
+    top: -5890px;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    flex-direction: column;
+    z-index: 2;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#cover{
+    display: none;
+    position: fixed;
+    background-color: gray;
+    z-index: 1;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}

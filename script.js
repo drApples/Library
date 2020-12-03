@@ -9,7 +9,7 @@ cover.addEventListener('click', closeModal)
 
 formButton.addEventListener('click', () => {
   resetInput();
-  bookForm.style.top = '50%';
+  bookForm.style.display = 'flex';
   bookForm.style.margin = 'auto';
   cover.style.display = 'block';
   bookForm.firstElementChild.firstElementChild.focus();
@@ -24,7 +24,6 @@ addButton.addEventListener('click', () => {
   closeModal();
 }
 )
-
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -57,7 +56,7 @@ function drawNewBook() {
 }
 
 function closeModal() {
-  bookForm.style.top = '-500px';
+  bookForm.style.display = 'none';
   cover.style.display = 'none';
 }
 

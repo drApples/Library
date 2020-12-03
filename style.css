@@ -12,10 +12,10 @@ button:hover{
 }
 
 #bookForm{
-    display: flex;
+    display: none;
     position: fixed;
-    top: -500px;
     left: 50%;
+    top: 50%;
     height: 400px;
     width: 200px;
     margin-bottom: 100px;

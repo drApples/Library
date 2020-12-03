@@ -1,21 +1,49 @@
 <html>
-    <header>
-        <meta charset="UTF-8">
-        <title>Library</title>
-        <link href="style.css" rel="stylesheet">
-    </header>
-        <body>
-            <h1>Library!</h1>
-            <button id="formButton">Add  a new book!</button>
-            <div id="bookForm" tabindex="-1">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="book_title">
-                <label for="author">Author:</label>
-                <input type="text" id="author" name="book_author">
-                <button id="addButton">Add</button>
+<header>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link href="style.css" rel="stylesheet">
+</header>
+
+<body>
+    <h1>Library!</h1>
+    <button id="formButton">Add a new book!</button>
+    <div id="bookForm" tabindex="-1">
+        <div class="formQuestion">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="book_title">
+        </div>
+        <div class="formQuestion">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="book_author">
+        </div>
+        <div class="formQuestion">
+            <label for="pages">Pages:</label>
+            <input type="text" id="pages" name="pages_author">
+        </div>
+        <div class="formQuestion">
+            <p>Read:</p>
+            <div class="radioChoice">
+                <label for="read">Yes</label>
+                <input type="radio" id="read" name="book_read" value="yes">
+                <label for="notread">No</label>
+                <input type="radio" id="notread" name="book_read" value="no" checked>
             </div>
-            <div id="booksTable"></div>
-            <div id="cover"></div>
-        </body>
-        <script src="script.js"></script>
+        </div>
+        <button id="addButton">Add</button>
+    </div>
+
+    <div id="booksTable">
+        <div class="tableRow" id="tableHeader">
+            <div class="tableCell" data-value="title">Title</div>
+            <div class="tableCell" data-value="author">Author</div>
+            <div class="tableCell" data-value="pages">Pages</div>
+            <div class="tableCell" data-value="read">Read</div>
+            <div class="tableCell" data-value="controls">Controls</div>
+        </div>
+    </div>
+    <div id="cover"></div>
+</body>
+<script src="script.js"></script>
+
 </html>

@@ -2,7 +2,7 @@ let myLibrary = [];
 const keys = ['title', 'author', 'pages', 'read'];
 const booksTable = document.getElementById('booksTable');
 const storage = window.localStorage;
-main()
+main();
 
 function main() {
   const bookForm = document.getElementById('bookForm');

@@ -2,13 +2,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Castoro', serif;
     width: auto;
     padding: 0;
     margin: 0;
-}
-
-button:hover{
-    cursor: pointer;
 }
 
 #bookForm{
@@ -17,16 +14,29 @@ button:hover{
     left: 50%;
     top: 50%;
     height: 400px;
-    width: 200px;
+    width: 250px;
     margin-bottom: 100px;
     margin-right: 100px;
     transform: translate(-50%, -50%);
     padding: 5px;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     z-index: 2;
     background-color: white;
     border: 1px solid black;
+}
+
+#title{
+    width: 240px;
+}
+
+#author{
+    width: 215px;
+}
+
+#pages{
+    width: 65px;
 }
 
 .formQuestion{
@@ -43,6 +53,7 @@ button:hover{
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: 400px 250px 75px 75px 200px;
+    grid-template-rows: 40px;
     width: 1000px;
     border-left: black solid 1px;
     border-bottom: black solid 1px;
@@ -51,6 +62,8 @@ button:hover{
 
 .tableCell{
     border-right: black solid 1px;
+    padding-top: 10px;
+    font-size: 15px;
 }
 
 #tableHeader{
@@ -60,6 +73,11 @@ button:hover{
 div[data-value="controls"]{
     display: flex;
     justify-content: center;
+    padding: 0;
+}
+
+#tableHeader>div[data-value="controls"]{
+    padding-top: 10px;
 }
 
 #cover{
@@ -76,4 +94,19 @@ div[data-value="controls"]{
 
 p{
     margin: 0;
+}
+
+button{
+    width: 75px;
+    font-family: 'Castoro', serif;
+    border: none;
+    margin: 10px;
+}
+
+#formButton{
+    width: 150px;
+}
+
+button:hover{
+    cursor: pointer;
 }

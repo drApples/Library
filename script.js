@@ -29,9 +29,8 @@ function main() {
   }
   )
   for(let i = 0; i < storage.length; i++){
-    let bookInfo = storage.getItem(i).split(' | ');
-    bookInfo[3] === 'false' ? bookInfo[3] = false : bookInfo[3] = true;
-    addBookToLibrary(bookInfo[0], bookInfo[1], bookInfo[2], bookInfo[3]);
+    myLibrary.push(JSON.parse(storage.getItem(i)));
+    drawNewBook(myLibrary[myLibrary.length - 1]);
   }
 }
 
@@ -123,9 +122,5 @@ function removeBtn(book) {
 }
 
 function toStorage(book, index){
-  let value = '';
-  for(let i = 0; i < keys.length; i++){
-    value += book[keys[i]] + ' | ';
-  }
-  storage.setItem(index, value.slice(0, -3));
+  storage.setItem(index, JSON.stringify(book));
 }
